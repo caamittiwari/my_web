@@ -44,12 +44,12 @@ def data_trf_in_csv(data):
                 header = False
                 break
 
-        with open("data.csv" ,newline="", mode="a") as cf:
-            csv_writer =  csv.DictWriter(cf ,fieldnames=fied_name)
-            if header :
-                csv_writer.writeheader()
-            
-            csv_writer.writerow(data)
+    with open("data.csv" ,newline="", mode="a") as cf:
+        csv_writer =  csv.DictWriter(cf ,fieldnames=fied_name)
+        if header :
+            csv_writer.writeheader()
+        
+        csv_writer.writerow(data)
 
 @app.route('/submit_form', methods=['POST', 'GET'])
 def submit():
